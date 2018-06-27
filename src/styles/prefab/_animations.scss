@@ -1,0 +1,31 @@
+.router-anim-enter-active {
+    animation: coming 1s;
+    animation-delay: .5s;
+    opacity: 0;
+}
+.router-anim-leave-active {
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+    animation: going 1s;
+}
+  
+@keyframes going {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+@keyframes coming {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,99 @@
+.header{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.318);
+    display: flex;
+    border-bottom: 3px solid $black;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    h1{
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 0;
+        line-height: 1;
+        letter-spacing: -1px;
+        position: relative;
+        color: $fontColor;
+        padding: 10px;
+
+        &:before{
+            content: "";
+            display: block;
+            width: 4px;
+            height: calc(150% + 20px);
+            background: $red;
+            position: absolute;
+            left: calc(100% + 15px);
+            top: -20px;
+            transform: rotate(20deg);
+        }
+
+        &:after{
+            content: "";
+            display: block;
+            width: 7px;
+            height: calc(150% + 20px);
+            background: $red;
+            position: absolute;
+            left: calc(100% + 23px);
+            top: -20px;
+            transform: rotate(20deg);
+        }
+    }
+
+    .nav-bar{
+        margin-left: auto;
+        display: flex;
+        position: relative;
+        background: $red;
+        padding: 10px;
+        align-items: center;
+
+        a{
+            margin: 0 15px;
+            color: #FFF;
+            padding: 5px 10px;
+            transition: 0.25s all;
+            border-radius: 5px;
+            backface-visibility: hidden;
+            
+            &:hover{
+                background: lighten($red, 8%);
+                transform: scale(1.05);
+            }
+
+            &:active{
+                transform: scale(0.95);
+            }
+        }
+
+        &:before{
+            content: "";
+            display: block;
+            width: 21px;
+            height: calc(200% + 20px);
+            background: $red;
+            position: absolute;
+            right: calc(100% - 3px);
+            top: -20px;
+            transform: rotate(20deg);
+        }
+
+        &:after{
+            content: "";
+            display: block;
+            width: 7px;
+            height: calc(200% + 20px);
+            background: $red;
+            position: absolute;
+            right: calc(100% + 23px);
+            top: -20px;
+            transform: rotate(20deg);
+        }
+    }
+}

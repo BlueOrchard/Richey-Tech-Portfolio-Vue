@@ -1,0 +1,15 @@
+.body-content{
+    min-height: calc(100vh - 61px);
+    margin-top: 61px;
+}
+
+.home-content{
+    .hero-part{
+        //background: #000;
+        background: url('../assets/bg.jpg') center center no-repeat;
+        width: 100%;
+        height: calc(100vh - 61px);
+        background-size: cover;
+        filter: grayscale(0.5);
+    }
+}
