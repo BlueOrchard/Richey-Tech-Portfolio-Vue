@@ -20,6 +20,16 @@
         position: relative;
         color: $fontColor;
         padding: 10px;
+        
+        b{
+            transition: 0.25s all;
+        }
+
+        &:hover{
+            b{
+                color: $red;
+            }
+        }
 
         &:before{
             content: "";
@@ -53,6 +63,11 @@
         background: $red;
         padding: 10px;
         align-items: center;
+        transition: 0.25s all $cubic;
+
+        &:hover{
+            padding-left: 30px;
+        }
 
         a{
             margin: 0 15px;

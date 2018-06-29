@@ -7,12 +7,8 @@
 </template>
 
 <script>
-import Home from '../routecomponents/home.vue';
 
 export default {
     name: 'Body',
-    components: {
-       Home 
-    }
 }
 </script>
