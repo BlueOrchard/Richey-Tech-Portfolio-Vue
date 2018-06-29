@@ -1,7 +1,6 @@
 .header{
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.318);
     display: flex;
-    border-bottom: 3px solid $black;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -20,6 +19,15 @@
         position: relative;
         color: $fontColor;
         padding: 10px;
+        transition: 0.25s all $cubic;
+
+        &:hover{
+            transform: scale(1.03)
+        }
+
+        &:active{
+            transform: scale(0.97)
+        }
         
         b{
             transition: 0.25s all;

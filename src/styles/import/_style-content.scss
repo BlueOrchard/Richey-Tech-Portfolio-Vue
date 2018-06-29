@@ -1,6 +1,6 @@
 .body-content{
     min-height: calc(100vh - 61px);
-    margin-top: 61px;
+    margin-top: 58px;
 }
 
 .home-content{
@@ -36,6 +36,7 @@
             color: #FFF;
             border: 5px solid #FFF;
             padding: 30px;
+            backface-visibility: hidden;
             
             h1{
                 font-weight: 300;
@@ -43,6 +44,7 @@
                 margin: 0;
                 line-height: 1;
                 margin: 0 0 10px;
+                backface-visibility: hidden;
             }
 
             p{
@@ -50,6 +52,7 @@
                 margin: 0;
                 line-height: 1;
                 font-weight: 300;
+                backface-visibility: hidden;
             }
         }
     }
@@ -95,7 +98,7 @@
                     position: absolute;
                     left: calc(100% + 15px);
                     top: -20px;
-                    transform: rotate(-20deg);
+                    transform: rotate(20deg);
                 }
         
                 &:after{
@@ -107,7 +110,25 @@
                     position: absolute;
                     left: calc(100% + 23px);
                     top: -20px;
-                    transform: rotate(-20deg);
+                    transform: rotate(20deg);
+                }
+            }
+        }
+
+        .icons{
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0 0;
+            flex-wrap: wrap;
+
+            .side{
+                display: flex;
+                flex-wrap: wrap;
+
+                i{
+                    font-size: 5.5em;
+                    margin: 0 20px;
+                    color: rgb(235, 235, 235);
                 }
             }
         }
@@ -118,13 +139,19 @@
             margin-top: 10px;
         }
 
+        h2{
+            font-weight: 300;
+            line-height: 1;
+            margin: 10px 0;
+        }
+
         p{
             font-weight: 300;
         }
 
         .selectors{
             display: flex;
-            margin: 20px -10px;
+            margin: 30px -10px 40px;
 
             .select-box{
                 width: 50%;
@@ -133,8 +160,35 @@
                 padding: 10px;
                 border-radius: 8px;
                 cursor: pointer;
-                transition: 0.25s all;
+                transition: 0.25s all $cubic;
                 backface-visibility: hidden;
+                border: 1px solid rgb(185, 185, 185);
+                overflow: hidden;
+                position: relative;
+
+                i{
+                    position: absolute;
+                    font-size: 100px;
+                    top: 50%;
+                    right: 3%;
+                    transform: rotate(30deg) translateY(-50%);
+                    opacity: 0.2;
+                }
+
+                &.active{
+                    background: $red;
+                    color: #FFF;
+                    transform: scale(1);
+                    border: 1px solid darken($red, 10%);
+
+                    &:hover{
+                        transform: scale(1);
+                    }
+
+                    .command{
+                        color: #FFF;
+                    }
+                }
 
                 &:hover{
                     transform: scale(1.05);
@@ -142,9 +196,9 @@
 
                 h2{
                     line-height: 1;
-                    font-weight: 500;
+                    font-weight: 300;
                     font-size: 1.8em;
-                    margin: 10px 0 15px;
+                    margin: 10px 0 0;
                 }
 
                 p{
