@@ -6,6 +6,8 @@
             </router-link>
         </div>
 
+        <div v-if="loader.loadState == 'VISIBLE'" class="loader"></div>
+
         <div class="nav-bar">
             <router-link to="/browse">Portfolio</router-link>
             <router-link to="/contact">Contact</router-link>
@@ -14,7 +16,15 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-    name: 'Header'
-}
+    name: 'Header',
+    computed: mapState({
+        loader: 'loader'
+    })
+};
+
+
+// eslint-disable-next-line
 </script>
