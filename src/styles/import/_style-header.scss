@@ -9,6 +9,28 @@
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 10;
+
+    .loader{
+        height: 56px;
+        width: 56px;
+        margin-left: 50px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:after{
+            content: "";
+            display: block;
+            border: 2px solid rgb(238, 238, 238);
+            border-top: 2px solid $red;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            animation: 0.5s rotate linear infinite;
+        }
+    }
 
     h1{
         font-weight: normal;

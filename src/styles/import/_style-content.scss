@@ -1,5 +1,5 @@
 .body-content{
-    min-height: calc(100vh - 61px);
+    min-height: calc(100vh - 58px);
     margin-top: 58px;
 }
 
@@ -8,7 +8,7 @@
         //background: #000;
         background: url('../assets/bg.jpg') center center no-repeat;
         width: 100%;
-        height: calc(100vh - 61px);
+        height: calc(100vh - 58px);
         background-size: cover;
         filter: grayscale(0.5);
         position: relative;
@@ -206,6 +206,121 @@
                     line-height: 1;
                 }
             }
+        }
+    }
+
+    .projects{
+        .home-item{
+            display: flex;
+            margin: 0 0 20px;
+            border: 1px solid rgb(233, 233, 233);
+            padding: 10px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.25s all $cubic;
+            cursor: pointer;
+
+            &:hover{
+                transform: scale(1.03);
+
+                &:before, &:after{
+                    background: $red;
+                }
+            }
+
+            &:before, &:after{
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 100%;
+                width: 20px;
+                background: rgb(238, 238, 238);
+                transform: rotate(35deg);
+                transition: 0.25s all;
+            }
+
+            &:before{
+                bottom: -15%;
+            }
+
+            &:after{
+                right: 3%;
+                bottom: -15%;
+            }
+
+            .image{
+                width: 350px;
+                border-radius: 5px;
+                overflow: hidden;
+
+                img{
+                    display: block;
+                }
+            }
+
+            .rightside{
+                width: calc(100% - 350px);
+                padding: 0 20px;
+
+                h3{
+                    margin: 0;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+
+.image{
+    .loading{
+        overflow: hidden;
+        position: relative;
+        padding-top: 56.25%;
+        width: 100%;
+
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #e9e9e9;
+        }
+
+        @keyframes moveloader{
+            from{
+                left: -10%
+            }
+
+            to{
+                left: 100%;
+            }
+        }
+
+        &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 10%;
+            height: 5px;
+            background: $red;
+            animation: moveloader 1s linear infinite;
         }
     }
 }
