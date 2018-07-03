@@ -73,12 +73,21 @@
                  </div>
                  <p>Here's a small list of projects that I've worked on:</p>
 
-                 <li 
+                 <div 
                     v-for="item in this.$store.state.home.posts"
-                    v-bind:key="item.id"
-                >
-                    {{ item }}
-                 </li>
+                    v-bind:key="item.id">
+                    <div class="home-item">
+                        <showImage v-bind:image-id="item.featured_media" />
+                        <div class="rightside">
+                            <h3>{{ item.title.rendered }}</h3>
+                            <p v-html="item.excerpt.rendered">
+                                {{ item.excerpt.rendered }}
+                            </p>
+                        </div>
+                    </div>
+                    <!-- {{ item }} -->
+
+                 </div>
 
                  <router-link to="/browse">Browse More</router-link>
              </div>
@@ -88,7 +97,8 @@
 
 <script>
     import HomeChooser from './home-chooser';
-    import { mapMutations } from 'vuex'
+    import { mapMutations } from 'vuex';
+    import showImage from './show-image';
 
     export default {
         name: 'Home',
@@ -103,7 +113,7 @@
             }
         },
         components: {
-            HomeChooser
+            HomeChooser, showImage
         },
 
         created() {
