@@ -145,6 +145,10 @@
             margin: 10px 0;
         }
 
+        h3{
+            font-weight: 300;
+        }
+
         p{
             font-weight: 300;
         }
@@ -268,6 +272,86 @@
                 h3{
                     margin: 0;
                     font-weight: 300;
+                }
+            }
+        }
+    }
+    
+    .link-browse{
+        display: block;
+        background: $red;
+        color: #FFF;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        transition: 0.25s all $cubic;
+        font-weight: 300;
+        max-width: 300px;
+        margin: 0 auto;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+
+        &:active{
+            transform: scale(0.95);
+        }
+    }
+
+    .split-proficiencies{
+        margin-top: 30px;
+        display: flex;
+
+        .prof-list{
+            width: 30%;
+
+            h2{
+
+            }
+
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li{
+                    padding: 8px 20px;
+                    margin: 0 2px 4px;
+                    background: $red;
+                    line-height: 1;
+                    border-radius: 5px;
+                    color: #FFF;
+                    font-size: 0.8em;
+                }
+            }
+        }
+
+        .confidence-charts{
+            width: 70%;
+            padding: 30px 0 0 30px;
+
+            .conf-item{
+                margin: 0 0 10px;
+                position: relative;
+            }
+
+            .conf-name{
+                font-size: 0.8em;
+                margin: 0 0 5px;
+            } 
+            
+            .conf-value{
+                &.val{
+                    &-100{max-width: 100%;}
+                    &-90{max-width: 90%;}
+                    &-80{max-width: 80%;}
+                    &-70{max-width: 70%;}
+                    &-60{max-width: 60%;}
+                    &-50{max-width: 50%;}
+                    &-40{max-width: 40%;}
+                    &-30{max-width: 30%;}
                 }
             }
         }

@@ -67,7 +67,7 @@
              <div class="divider"></div>
 
              <div class="projects">
-                 <p class="command">$: sudo vi projects</p>
+                 <p class="command">$: sudo vi projects <span class="blink">_</span></p>
                  <div class="redbar">
                      <h1>Projects</h1>
                  </div>
@@ -89,7 +89,7 @@
 
                  </div>
 
-                 <router-link to="/browse">Browse More</router-link>
+                 <router-link class="link-browse" to="/browse">Browse More</router-link>
              </div>
          </div>
     </div>

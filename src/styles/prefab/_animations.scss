@@ -14,6 +14,24 @@
     animation: going 0.5s;
 }
 
+.home-chosen{
+    position: relative;
+}
+
+.fade-anim-enter-active{
+    animation: coming 0.5s;
+    animation-delay: .5s;
+    opacity: 0;
+}
+
+.fade-anim-leave-active{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: going 0.5s;
+}
+
 @keyframes rotate{
     from{
         transform: rotate(0deg);
@@ -56,4 +74,55 @@
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+// Configuration Homepage Animation
+
+.conf-value{
+    background: $red;
+    height: 30px;
+    width: 100%;
+    border-right: 5px solid lighten($red, 10%);
+}
+
+.conf-anim-enter, .conf-anim-leave-to{
+    width: 0%;
+    overflow: hidden;
+}
+
+.conf-anim-enter-to, .conf-anim-leave{
+    width: 100%;
+}
+
+.conf-anim-enter-active, .conf-anim-leave-active{
+    transition: 2.7s all linear;
+}
+
+
+// Drop Animation
+
+.drop-anim-enter, .drop-anim-leave-to{
+    transform: scale(0.9);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.drop-anim-enter-to, .drop-anim-leave{
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.drop-anim-enter-active, .drop-anim-leave-active{
+    transition: 0.5s all $cubic;
+}
+
+.drop-anim-enter-active{
+    transition-delay: 0.5s;
+}
+
+.drop-anim-leave-active{
+    position: absolute;
+    width: 100%;
+    top: 0;
 }
