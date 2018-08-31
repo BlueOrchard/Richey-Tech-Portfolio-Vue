@@ -1,0 +1,30 @@
+.footer{
+    background: $black;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.318);
+    border-top: 5px solid $red;
+   
+    .top-header{
+        padding: 20px 10px;
+        text-align: center;
+        color: #FFF;
+
+        h1{
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 1;
+            margin: 0 0 10px;
+            font-size: 2em;
+        }
+
+        p{
+            font-weight: 300;
+            margin: 0 0 8px;
+            line-height: 1;
+            font-size: 0.9em;
+
+            &.smaller{
+                font-size: 0.7em;
+            }
+        }
+    }
+}
