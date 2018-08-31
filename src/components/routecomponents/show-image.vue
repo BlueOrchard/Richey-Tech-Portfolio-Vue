@@ -34,7 +34,7 @@
         },
 
         created(){
-            Axios.get('https://richey.tech/wp-json/wp/v2/media/' + this.imageId)
+            Axios.get('https://api.richey.tech/wp-json/wp/v2/media/' + this.imageId)
                 .then((response) => {
                     this.imageURL = response.data.media_details.sizes.archive_image.source_url;
 
